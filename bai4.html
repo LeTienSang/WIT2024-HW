@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(240, 238, 238);
+            width: 400px;
+            height: 380px;
+            border: 2px solid rgb(61, 61, 61);
+            border-radius: 10px;
+        }
+
+        .box #box-title {
+            margin-top: 30px;
+            margin-left: 25px;
+            font-size: 30px;
+        }
+
+        .box #box-description {
+            color: rgb(170, 170, 170);
+            margin-top: 5px;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .box label {
+            margin-top: 30px;
+            margin-left: 25px;
+            display: block;
+            font-size: 15px; 
+        }
+
+        .box .box-child {
+            margin-top: 5px;
+            margin-left: 25px;
+            border: 2px solid rgb(61, 61, 61);
+            width: calc(100% - 50px);
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: black;
+            color: rgb(170, 170, 170);
+        }
+
+        .box button {
+            margin-top: 30px;
+            border: 2px solid rgb(61, 61, 61);
+            width: 100px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .box #cancel {
+            margin-left: 25px;
+            background-color: black;
+            color: rgb(240, 238, 238);
+        }
+
+        .box #deploy {
+            margin-left: 145px;
+            margin-right: 25px;
+            background-color: rgb(240, 238, 238);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="box-title">Creat project</div>
+        <div id="box-description">Deploy your new project in one-click.</div>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" class="box-child" id="name" placeholder="Name of your project"><br>
+
+        <label for="framework">Framework</label>
+        <select name="framework" class="box-child" id="framework">
+            <option value="">Select</option>
+            <option value="react">React</option>
+            <option value="vue">Vue.js</option>
+            <option value="angular">Angular.js</option>
+        </select><br>
+
+        <button id="cancel">Cancel</button>
+        <button id="deploy">Deploy</button>
+    </div>
+</body>
+</html>
